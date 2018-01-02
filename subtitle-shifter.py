@@ -64,7 +64,7 @@ if __name__ == '__main__':
         filename = sys.argv[1]
         offset = int(sys.argv[2])
     except IndexError as e:
-        print('Usage: srt-shift.py <srt file> <offset in milliseconds>')
+        print('Usage: subtitle-shifter.py <srt file> <offset in milliseconds>')
     except NameError as e:
         sys.stderr.write('Offset must be specified\n')
     except ValueError as e:
