@@ -63,11 +63,7 @@ if __name__ == '__main__':
     try:
         filename = sys.argv[1]
         offset = int(sys.argv[2])
-    except IndexError as e:
+    except Exception:
         print('Usage: subtitle-shifter.py <srt file> <offset in milliseconds>')
-    except NameError as e:
-        sys.stderr.write('Offset must be specified\n')
-    except ValueError as e:
-        sys.stderr.write('Offset must be an integer\n')
     else:
         shift_subtitles(filename, offset)
